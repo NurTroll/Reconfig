@@ -174,7 +174,7 @@ interface gigabitethernet 0/1
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive 
-  shutdown  
+  <status>  
 ! 
 interface gigabitethernet 0/2
   description <desc>
@@ -193,7 +193,7 @@ interface gigabitethernet 0/2
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive  
-  shutdown 
+  <status> 
 ! 
 interface gigabitethernet 0/3
   description <desc>
@@ -212,7 +212,7 @@ interface gigabitethernet 0/3
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive 
-  shutdown   
+  <status>   
 ! 
 interface gigabitethernet 0/4
   description <desc>
@@ -231,7 +231,7 @@ interface gigabitethernet 0/4
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown  
+  <status>  
 ! 
 interface gigabitethernet 0/5
   description <desc>
@@ -250,7 +250,7 @@ interface gigabitethernet 0/5
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive 
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/6
   description <desc>
@@ -270,7 +270,7 @@ interface gigabitethernet 0/6
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/7
   description <desc>
@@ -289,7 +289,7 @@ interface gigabitethernet 0/7
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/8
   description <desc>
@@ -309,7 +309,7 @@ interface gigabitethernet 0/8
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive  
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/9
   description <desc>
@@ -328,7 +328,7 @@ interface gigabitethernet 0/9
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/10
   description <desc>
@@ -347,7 +347,7 @@ interface gigabitethernet 0/10
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/11
   description <desc>
@@ -366,7 +366,7 @@ interface gigabitethernet 0/11
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/12
   description <desc>
@@ -385,7 +385,7 @@ interface gigabitethernet 0/12
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/13
   description <desc>
@@ -404,7 +404,7 @@ interface gigabitethernet 0/13
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/14
   description <desc>
@@ -423,7 +423,7 @@ interface gigabitethernet 0/14
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/15
   description <desc>
@@ -442,7 +442,7 @@ interface gigabitethernet 0/15
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/16
   description <desc>
@@ -461,7 +461,7 @@ interface gigabitethernet 0/16
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/17
   description <desc>
@@ -480,7 +480,7 @@ interface gigabitethernet 0/17
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/18
   description <desc>
@@ -499,7 +499,7 @@ interface gigabitethernet 0/18
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/19
   description <desc>
@@ -518,7 +518,7 @@ interface gigabitethernet 0/19
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/20
   description <desc>
@@ -537,7 +537,7 @@ interface gigabitethernet 0/20
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/21
   description <desc>
@@ -556,7 +556,7 @@ interface gigabitethernet 0/21
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/22
   description <desc>
@@ -575,7 +575,7 @@ interface gigabitethernet 0/22
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/23
   description <desc>
@@ -594,7 +594,7 @@ interface gigabitethernet 0/23
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface gigabitethernet 0/24
   description <desc>
@@ -613,7 +613,7 @@ interface gigabitethernet 0/24
   switchport port-security mode max-addresses  
   no lldp transmit
   no lldp receive   
-  shutdown
+  <status>
 ! 
 interface tengigabitethernet 0/1
   description <desc>
@@ -653,7 +653,6 @@ interface tengigabitethernet 0/4
   lldp tlv-select basic-tlv sys-name
   lldp tlv-select basic-tlv sys-descr
   lldp tlv-select basic-tlv sys-capab
-  shutdown
 ! 
 ip route 0.0.0.0  0.0.0.0 <gw>
 !
