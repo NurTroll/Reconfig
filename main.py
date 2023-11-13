@@ -90,8 +90,8 @@ for i in range(len(port_status[1])):
         port_status[1][i] = f'switchport mode general\nswitchport general allowed vlan {s}'
 
 for i in range(len(port_status[1])):
-    print(port_status[0][i], port_status[1][i], sep=' ')
-
+    #print(port_status[0][i], port_status[1][i], sep=' ')
+    print(port_status[1][i])
 
 print(vlans_list)
 print(description_list)
