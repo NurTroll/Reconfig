@@ -70,7 +70,7 @@ vlans_list = get_vlans(conf_text)
 management = ''.join([vlans_list[i - 1] for i in range(0, len(vlans_list)) if vlans_list[i] == "management"])
 iptv = ''.join([vlans_list[i - 1] for i in range(0, len(vlans_list)) if vlans_list[i] == "IPTV"])
 vlans_names = ""
-all_vlans = " ".join(vlans_list[0::2])
+all_vlans = ",".join(vlans_list[0::2])
 port_status = get_port_status(conf_text)
 for i in range(len(port_status[1])):
     x = ''
@@ -81,13 +81,13 @@ for i in range(len(port_status[1])):
     if ls[0] == "shutdown":
         continue
     elif ls[1] == 'default':
-        port_status[1][i] = f'switchport mode access\nswitchport access vlan {ls[3]}'
+        port_status[1][i] = f'switchport mode access\n  switchport access vlan {ls[3]}'
     elif ls[2] == 'pvid':
         s = ' '.join(ls[9:])
-        port_status[1][i] = f'switchport mode general\nswitchport general pvid {ls[4]}\nswitchport general allowed vlan {s}'
+        port_status[1][i] = f'switchport mode general\n  switchport general pvid {ls[4]}\n  switchport general allowed vlan {s}'
     elif ls[2] == 'allow-pass':
         s = ' '.join(ls[4:])
-        port_status[1][i] = f'switchport mode general\nswitchport general allowed vlan {s}'
+        port_status[1][i] = f'switchport mode general\n  switchport general allowed vlan {s}'
 
 for i in range(len(port_status[1])):
     #print(port_status[0][i], port_status[1][i], sep=' ')
@@ -109,7 +109,7 @@ for el in range(0,len(description_list)):
     new_text = new_text.replace('<desc>', f'"{description_list[el]}"', 1)
 for ports in range(len(port_status[1])):
     new_text = new_text.replace('<status>', port_status[1][ports], 1)
-filename = sys_name + '.conf'
+filename = 'startup.conf'
 output = open(filename, 'w', encoding='utf-8')
 print(new_text, file=output)
 empty_config.close()
