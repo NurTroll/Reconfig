@@ -58,6 +58,14 @@ def get_port_status(text):
     return port_status
 
 
+def get_vlans_names(ls):
+    s = ''
+    for i in range(1, len(ls), 2):
+        if ls[i - 1] != iptv and ls[i - 1] != management:
+            s += f'vlan {ls[i - 1]}\n  name {ls[i]}\n!\n'
+    return s
+
+
 old_conf = open('oldconfig.cfg', 'r', encoding='utf-8')
 conf_text = old_conf.readlines()
 sys_name = get_sysname(conf_text)
@@ -69,7 +77,7 @@ description_list = get_description(conf_text)
 vlans_list = get_vlans(conf_text)
 management = ''.join([vlans_list[i - 1] for i in range(0, len(vlans_list)) if vlans_list[i] == "management"])
 iptv = ''.join([vlans_list[i - 1] for i in range(0, len(vlans_list)) if vlans_list[i] == "IPTV"])
-vlans_names = ""
+vlans_names = get_vlans_names(vlans_list)
 all_vlans = ",".join(vlans_list[0::2])
 port_status = get_port_status(conf_text)
 for i in range(len(port_status[1])):
@@ -83,15 +91,12 @@ for i in range(len(port_status[1])):
     elif ls[1] == 'default':
         port_status[1][i] = f'switchport mode access\n  switchport access vlan {ls[3]}'
     elif ls[2] == 'pvid':
-        s = ' '.join(ls[9:])
+        s = ','.join(ls[9:])
         port_status[1][i] = f'switchport mode general\n  switchport general pvid {ls[4]}\n  switchport general allowed vlan {s}'
     elif ls[2] == 'allow-pass':
-        s = ' '.join(ls[4:])
+        s = ','.join(ls[4:])
         port_status[1][i] = f'switchport mode general\n  switchport general allowed vlan {s}'
 
-for i in range(len(port_status[1])):
-    #print(port_status[0][i], port_status[1][i], sep=' ')
-    print(port_status[1][i])
 
 print(vlans_list)
 print(description_list)
