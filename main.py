@@ -31,7 +31,7 @@ def get_description(text):
             if text[i + 1].startswith(' description') == False:
                 descriptions.append('!')
             else:
-                descriptions.append(text[i + 1].strip()[11:])
+                descriptions.append(text[i + 1].strip().replace('"', '')[12:])
     return descriptions
 
 
