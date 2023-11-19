@@ -153,7 +153,7 @@ vlan 3979
   name "ACS"
 ! 
 interface vlan <management>
-  ip address <ip>
+  <ip>
   ipv6 enable 
 ! 
 interface gigabitethernet 0/1
