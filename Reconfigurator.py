@@ -1,5 +1,6 @@
 from datetime import date #импорт модуля для определения текущей даты
 import os #импорт модуля для работы с папками в оси, для создания папки
+from typing import TextIO
 #Функция возвращающая hostname коммутатора
 def get_sysname(text):
     for line in text:
